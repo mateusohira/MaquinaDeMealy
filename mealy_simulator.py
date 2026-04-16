@@ -21,16 +21,7 @@ def carregar_maquina(caminho_arquivo):
 
     ext = os.path.splitext(caminho_arquivo)[1].lower()
 
-    if ext == '.json':
-        maquina = json.loads(conteudo)
-    else:
-        maquina = eval(conteudo)
-
-    # Converte listas em conjuntos (quando vem do JSON)
-    conjunto_S = set()
-    for estado in maquina['S']:
-        conjunto_S.add(estado)
-    maquina['S'] = conjunto_S
+    maquina = eval(conteudo)
 
     conjunto_I = set()
     for simbolo in maquina['I']:

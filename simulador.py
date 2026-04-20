@@ -5,7 +5,7 @@
 import os
 
 # Carregar arquivo
-caminho = input("Digite o caminho do arquivo: ")
+caminho = input("Digite o nome do arquivo: ")
 
 if not os.path.exists(caminho):
     print("Arquivo não encontrado!")
